@@ -5,6 +5,7 @@ The data in the data base(In this case Firebase) will be deleted every 15 minute
 User data also can be stored in the Firebase 
 
 You have to Add your own Google Map API key in the strings.xml in the res folder
-and Put firebaseurl of you which own Firebase database location in the Constants.java class file
+and
+The firebaseurl of you own Firebase database location in the Constants.java class file
 
 
