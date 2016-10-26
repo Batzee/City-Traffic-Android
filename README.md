@@ -6,6 +6,6 @@ User data also can be stored in the Firebase
 
 You have to Add your own Google Map API key in the strings.xml in the res folder
 and
-The firebaseurl of you own Firebase database location in the Constants.java class file
+The firebaseurl of your own Firebase database location in the Constants.java class file
 
 
