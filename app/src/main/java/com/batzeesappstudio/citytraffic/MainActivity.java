@@ -602,7 +602,10 @@ public class MainActivity extends AppCompatActivity implements
 
     private void deleteMarkersFromServer(){
         //Query applesQuery = mDatabase.limitToFirst(100);
-        Query applesQuery = mDatabase.orderByKey();
+        //Query applesQuery = mDatabase.orderByKey();
+            
+        Date date = new Date(System.currentTimeMillis() - (900000)); //900000 is 15 minutes in ms
+        Query applesQuery = mDatabase.endAt(date);
 
         applesQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
