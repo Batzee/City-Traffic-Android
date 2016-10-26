@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "11162410900",
+    "firebase_url": "https://utopian-domain-137123.firebaseio.com",
+    "project_id": "utopian-domain-137123",
+    "storage_bucket": "utopian-domain-137123.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11162410900:android:81b3bd732de56294",
+        "android_client_info": {
+          "package_name": "com.batzeesappstudio.citytraffic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11162410900-k1347nffgsu0lqcvppjaen36sfogt9l6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.batzeesappstudio.citytraffic",
+            "certificate_hash": "130D62727EE5E524692A08124D2254F38E5B6936"
+          }
+        },
+        {
+          "client_id": "11162410900-c7p4l52ks9lpkqk7mivbuhifdvu6fuer.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0BbmF3o69GNsIV_S4h-0T623PAfL212Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11162410900-c7p4l52ks9lpkqk7mivbuhifdvu6fuer.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

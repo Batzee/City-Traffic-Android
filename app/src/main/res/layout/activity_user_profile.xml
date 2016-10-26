@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/userprofileid"
+    tools:context="com.batzeesappstudio.citytraffic.UserProfile">
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageButtonUserImage"
+        android:background="@android:mipmap/sym_def_app_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextNewName"
+        android:hint="New Name"
+        android:layout_alignTop="@+id/buttonChangeName"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/editTextNewEmail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editTextNewEmail"
+        android:hint="New Email"
+        android:layout_alignBottom="@+id/buttonChangeEmail"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextNewPassword"
+        android:hint="New Password"
+        android:layout_above="@+id/editTextConfirmPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/editTextConfirmPassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Name"
+        android:id="@+id/buttonChangeName"
+        android:layout_above="@+id/editTextNewEmail"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextConfirmPassword"
+        android:hint="Confirm Password"
+        android:layout_alignBottom="@+id/buttonChangePassword"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/buttonChangePassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:id="@+id/buttonChangePassword"
+        android:layout_marginBottom="48dp"
+        android:layout_above="@+id/buttonDeleteAccount"
+        android:layout_alignEnd="@+id/buttonChangeEmail" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Email"
+        android:id="@+id/buttonChangeEmail"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/buttonChangeName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete My Account"
+        android:id="@+id/buttonDeleteAccount"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:background="#de0909"
+        android:padding="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Image"
+        android:id="@+id/buttonChangeImage"
+        android:layout_alignBottom="@+id/imageButtonUserImage"
+        android:layout_alignEnd="@+id/buttonChangeName" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBarProfile"
+        android:layout_below="@+id/editTextConfirmPassword"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
