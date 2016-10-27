@@ -8,8 +8,10 @@ User data also can be stored in the Firebase.
 
     1.You have to Add your own Google Map API key in the strings.xml in the res folder
     2.The firebase url of your own Firebase database location in the Constants.java class file
-    3.In Your Firebase Database section create a Node called 'LiveTraffic'
-    4.In your Firebase 'Storage' Section you must have a folder called 'city_traffic'
+    3.In Your Firebase Database section you should see a Node called 'LiveTraffic' when you have marked a location (This one Automatically gets Created and deleted from the code in Android)
+    4.In your Firebase 'Storage' Section you must have a folder hierarchy like this 'city_traffic/profile_images/'
+     Will look like this, I have added a screenshot showing the 'city_traffic' folder level, inside it you have to create another folder called 'profile_images'(https://www.dropbox.com/s/ksy4zvnm2dkh44u/GitHub_ReadMe_Firebase_Storage.jpg)
+     
 
 
 
