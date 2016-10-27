@@ -73,11 +73,14 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
@@ -522,7 +525,15 @@ public class MainActivity extends AppCompatActivity implements
         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
             GeoLocation locationAll = dataSnapshot.getValue(GeoLocation.class);
             Calendar c = Calendar.getInstance();
-            Date date = new Date(locationAll.getTime());
+            SimpleDateFormat format = new SimpleDateFormat("EEE MMM d HH:mm:ss z yyyy");
+
+            Date date = null;
+            try {
+                date = format.parse(locationAll.getTime());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
             Date oldDate = new Date(c.getTime().getTime());
 
             int oldSeconds = (int)(oldDate.getTime()/1000);
