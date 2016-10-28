@@ -508,7 +508,7 @@ public class MainActivity extends AppCompatActivity implements
         GeoLocation location = new GeoLocation();
         location.setID(user.getUid());
         Log.d("Main Activity",user.getDisplayName());
-        location.setName(user.getDisplayName());
+        location.setUsername(user.getDisplayName());
         location.setType(type);
         location.setLongti(lon+"");
         location.setLati(lat+"");
@@ -602,11 +602,11 @@ public class MainActivity extends AppCompatActivity implements
     private void addmarker(GeoLocation geo) {
         LatLng nowTraffic = new LatLng(Float.parseFloat(geo.getLati()), Float.parseFloat(geo.getLongti()));
         String markerGuy;
-        if(geo.getName() == null || geo.getName().equals("")){
+        if(geo.getDisplayName() == null || geo.getDisplayName().equals("")){
             markerGuy = "Unknown";
         }
         else {
-            markerGuy = geo.getName();
+            markerGuy = geo.getDisplayName();
         }
 
         if(mMap != null) {
