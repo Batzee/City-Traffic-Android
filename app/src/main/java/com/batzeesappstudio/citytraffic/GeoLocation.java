@@ -28,7 +28,7 @@ public class GeoLocation {
         this.userid = userid;
     }
 
-    public String getUsername() {
+    public String getDisplayName() {
         return username;
     }
 
