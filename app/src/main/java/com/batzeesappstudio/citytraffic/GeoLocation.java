@@ -7,8 +7,8 @@ import java.util.Map;
  * Created by adh on 7/20/2016.
  */
 public class GeoLocation {
-    private String userid;
-    private String username;
+    private String userID;
+    private String userName;
     private String type;
     private String longtitude;
     private String latitude;
@@ -19,59 +19,18 @@ public class GeoLocation {
         /*Blank default constructor essential for Firebase*/
     }
 
-
-    public String getUserid() {
-        return userid;
-    }
-
-    public void setUserid(String userid) {
-        this.userid = userid;
-    }
-
-    public String getDisplayName() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getLongtitude() {
-        return longtitude;
-    }
-
-    public void setLongtitude(String longtitude) {
-        this.longtitude = longtitude;
-    }
-
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getDateTime() {
-        return dateTime;
-    }
-
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
-    }
-
     public void setID(String id) {
-        this.userid = id;
+        this.userID = id;
     }
     public String getID() {
-        return userid;
+        return userID;
     }
 
     public void setName(String name) {
-        this.username = name;
+        this.userName = name;
     }
     public String getName() {
-        return username;
+        return userName;
     }
 
     public void setType(String locType) {
@@ -104,8 +63,8 @@ public class GeoLocation {
 
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
-        result.put("userid", userid);
-        result.put("username", username);
+        result.put("userid", userID);
+        result.put("username", userName);
         result.put("type", type);
         result.put("longti", longtitude);
         result.put("lati", latitude);

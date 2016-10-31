@@ -73,15 +73,11 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
@@ -268,7 +264,7 @@ public class MainActivity extends AppCompatActivity implements
     private void feedback() {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("message/rfc822");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"Your Support Email Address"});
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"batzeesappstudio@gmail.com"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "City Traffic Feedback");
         intent.putExtra(Intent.EXTRA_TEXT, "");
 
@@ -507,8 +503,7 @@ public class MainActivity extends AppCompatActivity implements
     public void addTrafficData(String type, double lat, double lon) {
         GeoLocation location = new GeoLocation();
         location.setID(user.getUid());
-        Log.d("Main Activity",user.getDisplayName());
-        location.setUsername(user.getDisplayName());
+        location.setName(user.getDisplayName());
         location.setType(type);
         location.setLongti(lon+"");
         location.setLati(lat+"");
@@ -526,19 +521,8 @@ public class MainActivity extends AppCompatActivity implements
         @Override
         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
             GeoLocation locationAll = dataSnapshot.getValue(GeoLocation.class);
-
-
             Calendar c = Calendar.getInstance();
-//            Date date = null;//new Date(locationAll.getTime());
-//            try {
-//                Log.e("Main",locationAll.getTime());
-//                date = (Date)df.parse(locationAll.getTime());
-//            } catch (ParseException e) {
-//                e.printStackTrace();
-//            }
-            long millisecs = 2*3600*1000; // added to change from BST to GMT
-            Date date = new Date(locationAll.getTime().replace("BST", "GMT"));
-            date.setTime(date.getTime()+millisecs);
+            Date date = new Date(locationAll.getTime());
             Date oldDate = new Date(c.getTime().getTime());
 
             int oldSeconds = (int)(oldDate.getTime()/1000);
@@ -578,7 +562,6 @@ public class MainActivity extends AppCompatActivity implements
     private void addmarker(String title, double lat, double lon) {
         LatLng nowTraffic = new LatLng(lat, lon);
         String markerGuy;
-        Log.d("Main Activity","Initiated marking");
         if(user.getDisplayName() == null || user.getDisplayName().equals("")){
             markerGuy = "Unknown";
         }
@@ -602,11 +585,11 @@ public class MainActivity extends AppCompatActivity implements
     private void addmarker(GeoLocation geo) {
         LatLng nowTraffic = new LatLng(Float.parseFloat(geo.getLati()), Float.parseFloat(geo.getLongti()));
         String markerGuy;
-        if(geo.getDisplayName() == null || geo.getDisplayName().equals("")){
+        if(geo.getName() == null || geo.getName().equals("")){
             markerGuy = "Unknown";
         }
         else {
-            markerGuy = geo.getDisplayName();
+            markerGuy = geo.getName();
         }
 
         if(mMap != null) {

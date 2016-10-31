@@ -12,7 +12,7 @@
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Location permissions is needed for providing your information to the App"</string>
 
-    <string name="google_maps_key">"Place Your Google Map API Key"</string>
+    <string name="google_maps_key">"Google Map Key"</string>
 
     <string name="demo_title">Google Maps API Demos</string>
     <string name="legal_info">Legal Info</string>
