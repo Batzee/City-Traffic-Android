@@ -4,7 +4,7 @@ People can install this app in their mobile phone and can mark the location of t
 The data that are older than 15 minutes in the data base(In this case database is Firebase Database) will be deleted.
 User data also can be stored in the Firebase.
 
-##Things to do do before start Developing the App
+## Things to do do before start Developing the App
 
     1.You have to Add your own Google Map API key in the strings.xml in the res folder
     2.The firebase url of your own Firebase database location in the Constants.java class file
@@ -14,7 +14,8 @@ User data also can be stored in the Firebase.
      
 
 
-
+![Screenshot](/assets/pic1.jpg?raw=true )
+![Screenshot](/assets/pic2.jpg?raw=true )
 
 
 
