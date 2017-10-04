@@ -622,7 +622,7 @@ public class MainActivity extends AppCompatActivity implements
         //Query applesQuery = mDatabase.orderByKey();
             
         Date date = new Date(System.currentTimeMillis() - (900000)); //900000 is 15 minutes in ms
-        Query applesQuery = mDatabase.endAt(date);
+        Query applesQuery = mDatabase.endAt(String.valueOf(date));
 
         applesQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
