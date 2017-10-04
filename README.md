@@ -15,6 +15,7 @@ User data also can be stored in the Firebase.
 
 
 ![Screenshot](/assets/pic1.jpg?raw=true )
+![Screenshot](/assets/pic2.jpg?raw=true )
 
 
 
